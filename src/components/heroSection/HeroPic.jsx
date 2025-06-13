@@ -10,7 +10,7 @@ const HeroPic = () => {
       initial="hidden"
       whileInView="show"
       viewport={{ once: false, amount: 0 }}
-      className="flex items-center justify-center h-full "
+      className="flex items-center justify-center h-full pt-10 md:pt-0"
     >
       <img
         src="/images/sneh.jpg"
