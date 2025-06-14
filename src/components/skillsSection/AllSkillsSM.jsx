@@ -7,6 +7,9 @@ import { SiPython } from "react-icons/si";
 import { motion } from "framer-motion";
 import { fadeIn } from "../../framerMotion/variants";
 import { BiLogoCPlusPlus } from "react-icons/bi";
+import { RiNodejsLine } from "react-icons/ri";
+import { SiExpress } from "react-icons/si";
+import { BiLogoMongodb } from "react-icons/bi";
 
 const skills = [
   {
@@ -28,6 +31,18 @@ const skills = [
   {
     skill: "ReactJS",
     icon: FaReact,
+  },
+  {
+    skill: "NodeJS",
+    icon: RiNodejsLine,
+  },
+  {
+    skill: "ExpressJS",
+    icon: SiExpress,
+  },
+  {
+    skill: "MongoDB",
+    icon: BiLogoMongodb,
   },
   {
     skill: "TailwindCSS",
