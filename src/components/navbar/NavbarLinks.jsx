@@ -1,6 +1,6 @@
 import { scroller } from "react-scroll";
 import { useNavigate, useLocation } from "react-router-dom";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { toggleMenu } from "../../state/menuSlice";
 
 const links = [
@@ -15,6 +15,7 @@ const NavbarLinks = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const dispatch = useDispatch();
+  const menuOpen = useSelector((state) => state.menu.menuOpen);
 
   const handleScrollNavigation = (section) => {
     if (location.pathname !== "/") {
@@ -33,12 +34,20 @@ const NavbarLinks = () => {
         offset: -130,
       });
     }
-    dispatch(toggleMenu());
+
+    // Close menu if it's open
+    if (menuOpen) {
+      dispatch(toggleMenu());
+    }
   };
 
   const handleRouteNavigation = (route) => {
-    navigate(route);
-    dispatch(toggleMenu());
+    if (location.pathname !== route) {
+      navigate(route);
+    }
+    if (menuOpen) {
+      dispatch(toggleMenu());
+    }
   };
 
   return (

@@ -14,19 +14,19 @@ const NavbarToggler = () => {
 
   useEffect(() => {
     const handleClickOutside = (event) => {
-      if (buttonRef.current && !buttonRef.current.contains(event.target)) {
+      if (menuOpen && buttonRef.current && !buttonRef.current.contains(event.target)) {
         dispatch(closeMenu());
       }
     };
 
     const handleScroll = () => {
-      dispatch(closeMenu());
+      if (menuOpen) {
+        dispatch(closeMenu());
+      }
     };
 
-    if (menuOpen) {
-      document.addEventListener("mousedown", handleClickOutside);
-      window.addEventListener("scroll", handleScroll);
-    }
+    document.addEventListener("mousedown", handleClickOutside);
+    window.addEventListener("scroll", handleScroll);
 
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
@@ -37,7 +37,7 @@ const NavbarToggler = () => {
   return (
     <button
       ref={buttonRef}
-      className="p-3 text-2xl border rounded-full border-orange"
+      className={`text-2xl p-3 border border-orange rounded-full transition-transform duration-300 ${menuOpen ? "rotate-90" : "rotate-0"}`}
       onClick={setToggleMenu}
     >
       <GiHamburgerMenu />
