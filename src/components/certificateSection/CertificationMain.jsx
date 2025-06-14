@@ -25,7 +25,7 @@ const certificates = [
   },
   {
     title: "EDA analysis using power BI",
-    platform: "Infosys",
+    platform: "SkillEcted",
     image: "/certificates/power_bi.png",
   },
   {
