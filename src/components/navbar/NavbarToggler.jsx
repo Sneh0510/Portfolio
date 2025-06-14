@@ -19,12 +19,18 @@ const NavbarToggler = () => {
       }
     };
 
+    const handleScroll = () => {
+      dispatch(closeMenu());
+    };
+
     if (menuOpen) {
       document.addEventListener("mousedown", handleClickOutside);
+      window.addEventListener("scroll", handleScroll);
     }
 
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, [menuOpen, dispatch]);
 
