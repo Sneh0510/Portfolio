@@ -1,5 +1,7 @@
 import { scroller } from "react-scroll";
 import { useNavigate, useLocation } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { toggleMenu } from "../../state/menuSlice";
 
 const links = [
   { link: "About Me", section: "about", isRoute: false },
@@ -12,6 +14,7 @@ const links = [
 const NavbarLinks = () => {
   const navigate = useNavigate();
   const location = useLocation();
+  const dispatch = useDispatch();
 
   const handleScrollNavigation = (section) => {
     if (location.pathname !== "/") {
@@ -22,7 +25,7 @@ const NavbarLinks = () => {
           smooth: true,
           offset: -130,
         });
-      }, 100); // Small delay to allow rendering
+      }, 100);
     } else {
       scroller.scrollTo(section, {
         duration: 500,
@@ -30,32 +33,56 @@ const NavbarLinks = () => {
         offset: -130,
       });
     }
+    dispatch(toggleMenu());
+  };
+
+  const handleRouteNavigation = (route) => {
+    navigate(route);
+    dispatch(toggleMenu());
   };
 
   return (
-    <ul className="flex lg:flex-row sm:flex-col gap-6 text-white font-body lg:relative sm:absolute sm:top-[120%] text-center left-[50%] -translate-x-[50%] lg:text-md sm:text-xl sm:bg-cyan/30 backdrop-blur-lg lg:bg-black sm:w-full py-4">
-      {links.map((link, index) => {
-        return (
-          <li key={index} className="group">
-            {link.isRoute ? (
-              <button
-                onClick={() => navigate(link.section)}
-                className="text-white transition-all duration-500 cursor-pointer hover:text-cyan"
-              >
-                {link.link}
-              </button>
-            ) : (
-              <button
-                onClick={() => handleScrollNavigation(link.section)}
-                className="text-white transition-all duration-500 cursor-pointer hover:text-cyan"
-              >
-                {link.link}
-              </button>
-            )}
-            <div className="mx-auto bg-cyan w-0 group-hover:w-full h-[1px] transition-all duration-500"></div>
-          </li>
-        );
-      })}
+    <ul className="
+      flex 
+      lg:flex-row 
+      sm:flex-col 
+      gap-6 
+      text-white 
+      font-body 
+      lg:relative 
+      sm:relative 
+      sm:text-center 
+      sm:items-center 
+      sm:justify-center 
+      left-[50%] -translate-x-[50%] 
+      lg:text-md 
+      sm:text-xl 
+      sm:bg-cyan/30 
+      backdrop-blur-lg 
+      lg:bg-black 
+      sm:w-full 
+      py-4"
+    >
+      {links.map((link, index) => (
+        <li key={index} className="group">
+          {link.isRoute ? (
+            <button
+              onClick={() => handleRouteNavigation(link.section)}
+              className="text-white transition-all duration-500 cursor-pointer hover:text-cyan"
+            >
+              {link.link}
+            </button>
+          ) : (
+            <button
+              onClick={() => handleScrollNavigation(link.section)}
+              className="text-white transition-all duration-500 cursor-pointer hover:text-cyan"
+            >
+              {link.link}
+            </button>
+          )}
+          <div className="mx-auto bg-cyan w-0 group-hover:w-full h-[1px] transition-all duration-500"></div>
+        </li>
+      ))}
     </ul>
   );
 };
