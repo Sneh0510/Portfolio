@@ -15,11 +15,17 @@ const NavbarLogo = () => {
 
   return (
     <div>
-      <h1 className="text-2xl text-white sm:hidden md:block" onClick={handleLogoClick}>
+      <h1
+        className="text-2xl text-white sm:hidden md:block"
+        onClick={handleLogoClick}
+      >
         Sneh Yadav
       </h1>
-      <h1 className="text-4xl font-extrabold text-white font-special md:hidden sm:block" onClick={handleLogoClick}>
-        AQ
+      <h1
+        className="text-2xl font-extrabold text-white sm:text-3xl md:text-4xl font-special md:hidden sm:block"
+        onClick={handleLogoClick}
+      >
+        Sneh
       </h1>
     </div>
   );
