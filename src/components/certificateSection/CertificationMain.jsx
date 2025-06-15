@@ -19,7 +19,7 @@ const certificates = [
     image: "/certificates/greatstack.png",
   },
   {
-    title: "JS fundamentals",
+    title: "AI Tools Workshop",
     platform: "BE10x",
     image: "/certificates/be10x.png",
   },
