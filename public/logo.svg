@@ -20,7 +20,7 @@
 
   <!-- Main Text -->
   <text x="50%" y="58%" text-anchor="middle" dominant-baseline="middle"
-        font-family="Poppins, Arial, sans-serif" font-size="240" fill="#F5F7FA"
+        font-family="Poppins, Arial, sans-serif" font-size="280" fill="#F5F7FA"
         font-weight="900" letter-spacing="15">
     SY
   </text>
