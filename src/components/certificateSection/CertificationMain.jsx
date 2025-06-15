@@ -19,6 +19,11 @@ const certificates = [
     image: "/certificates/greatstack.png",
   },
   {
+    title: "JS fundamentals",
+    platform: "BE10x",
+    image: "/certificates/be10x.png",
+  },
+  {
     title: "Cybersecurity Analyst Job Simulation",
     platform: "Tata Forage",
     image: "/certificates/forage.png",
