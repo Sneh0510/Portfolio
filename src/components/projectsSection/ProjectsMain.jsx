@@ -17,7 +17,7 @@ const ProjectsMain = () => {
       year: "March 2025",
       align: "left",
       image: "/images/lms.png",
-      link: "https://lms-azure-three.vercel.app/",
+      link: "https://lms-sepia-phi.vercel.app/",
       github: "https://github.com/Sneh0510/LMS",
     },
     {
