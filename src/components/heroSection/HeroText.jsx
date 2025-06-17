@@ -30,7 +30,7 @@ const HeroText = () => {
         viewport={{ once: false, amount: 0 }}
         className="mt-4 text-lg"
       >
-        I am a MERN stack developer specializing in building scalable, efficient, and responsive full-stack web applications.
+        I am a MERN stack developer specializing in building scalable,<br/> efficient, and responsive full-stack web applications.
       </motion.p>
     </div>
   );
