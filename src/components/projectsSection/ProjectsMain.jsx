@@ -6,7 +6,7 @@ const ProjectsMain = () => {
   const projects = [
     {
       name: "Imagify",
-      year: "March 2025",
+      year: "April 2025",
       align: "right",
       image: "/images/Imagify.png",
       link: "https://imagify-rho-three.vercel.app/",
@@ -14,27 +14,27 @@ const ProjectsMain = () => {
     },
     {
       name: "Learning Management System",
-      year: "March 2025",
+      year: "Feb 2025",
       align: "left",
       image: "/images/lms.png",
       link: "https://lms-sepia-phi.vercel.app/",
       github: "https://github.com/Sneh0510/LMS",
     },
     {
-      name: "Spotify-Clone",
-      year: "March 2025",
-      align: "right",
-      image: "/images/spotify.png",
-      link: "https://spotify-clone-henna-tau.vercel.app/",
-      github: "https://github.com/Sneh0510/Spotify-clone",
-    },
-    {
       name: "Slot Booking",
-      year: "March 2025",
-      align: "left",
+      year: "Jan 2025",
+      align: "right",
       image: "/images/slot_booking.png",
       link: "https://slot-booking-livid.vercel.app/",
       github: "https://github.com/Sneh0510/Cursor-Wave",
+    },
+    {
+      name: "Spotify-Clone",
+      year: "Dec 2024",
+      align: "left",
+      image: "/images/spotify.png",
+      link: "https://spotify-clone-henna-tau.vercel.app/",
+      github: "https://github.com/Sneh0510/Spotify-clone",
     },
     {
       name: "Real Estate Management System",
@@ -46,7 +46,7 @@ const ProjectsMain = () => {
     },
     {
       name: "Cursor-Wave",
-      year: "Jan 2025",
+      year: "Aug 2024",
       align: "left",
       image: "/images/website-img-3.jpg",
       link: "#",
