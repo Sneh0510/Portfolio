@@ -4,6 +4,11 @@ import AnimatedBlock from "../../framerMotion/AnimatedBlock";
 
 const certificates = [
   {
+    title: "Internship",
+    platform: "TatvaSoft",
+    image: "/certificates/tatvasoft.jpg",
+  },
+  {
     title: "Python for Data Science",
     platform: "NPTEL",
     image: "/certificates/NPTEL_PYTHON.png",
