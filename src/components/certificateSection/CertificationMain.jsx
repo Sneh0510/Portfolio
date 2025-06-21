@@ -29,14 +29,14 @@ const certificates = [
     image: "/certificates/be10x.png",
   },
   {
-    title: "Cybersecurity Analyst Job Simulation",
-    platform: "Tata Forage",
-    image: "/certificates/forage.png",
-  },
-  {
     title: "EDA analysis using power BI",
     platform: "SkillEcted",
     image: "/certificates/power_bi.png",
+  },
+  {
+    title: "Cybersecurity Analyst Job Simulation",
+    platform: "Tata Forage",
+    image: "/certificates/forage.png",
   },
   {
     title: "Mastering Date and Time in Python",
